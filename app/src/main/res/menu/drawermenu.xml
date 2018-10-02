@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Instructions"
+        android:id="@+id/instructions"
+
+        />
+    <item  android:title="About"
+        android:id="@+id/about"
+
+        ></item>
+    <item  android:title="Acknowledgements"
+        android:id="@+id/acknowledgements"
+
+        ></item>
+    <item  android:title="Share"
+        android:id="@+id/share"
+
+        ></item>
+
+</menu>

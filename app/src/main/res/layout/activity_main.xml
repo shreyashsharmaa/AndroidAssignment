@@ -25,7 +25,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/emailEditText"
         android:layout_width="304dp"
         android:layout_height="40dp"
         android:layout_marginEnd="8dp"
@@ -33,27 +33,28 @@
         android:layout_marginTop="52dp"
         android:ems="10"
         android:hint="Enter your email"
-
-        android:inputType="textPersonName"
+        android:textColor="@color/colorAccent"
+        android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LogoImage" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/passwordEditText"
         android:layout_width="304dp"
         android:layout_height="46dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
         android:ems="10"
+        android:textColor="@color/colorAccent"
         android:hint="Enter Password"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="@+id/emailEditText"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="@+id/editText"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintStart_toStartOf="@+id/emailEditText"
+        app:layout_constraintTop_toBottomOf="@+id/emailEditText"
         app:layout_constraintVertical_bias="0.03" />
 
     <Button
@@ -67,10 +68,10 @@
         android:text="LOGIN"
 
         android:textColor="@color/colorAccent"
-        app:layout_constraintEnd_toEndOf="@+id/editText3"
+        app:layout_constraintEnd_toEndOf="@+id/passwordEditText"
         app:layout_constraintHorizontal_bias="0.2"
-        app:layout_constraintStart_toStartOf="@+id/editText3"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintStart_toStartOf="@+id/passwordEditText"
+        app:layout_constraintTop_toBottomOf="@+id/passwordEditText" />
 
     <TextView
         android:id="@+id/textView"
@@ -80,7 +81,7 @@
         android:text="Please login to continue"
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
-        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintBottom_toTopOf="@+id/emailEditText"
         app:layout_constraintEnd_toEndOf="@+id/LogoImage"
         app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="@+id/LogoImage" />
@@ -129,7 +130,6 @@
         android:layout_height="47dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-
         android:layout_marginTop="40dp"
         android:background="@color/colorPrimaryDark"
         android:text="SIGN UP"
@@ -137,5 +137,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+
 
 </android.support.constraint.ConstraintLayout>
