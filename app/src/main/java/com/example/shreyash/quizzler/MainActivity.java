@@ -28,6 +28,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        if(mAuth.getInstance().getCurrentUser()!=null)
+        {
+            startActivity(new Intent(this,HomeActivity.class));
+        }
         emailText=findViewById(R.id.emailEditText);
         mAuth = FirebaseAuth.getInstance();
         passwordText=findViewById(R.id.passwordEditText);
@@ -65,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()) {
 
-                    openHomeActivity();
+                    startActivity(new Intent(MainActivity.this,HomeActivity.class));
                 }
             }
         });
@@ -83,10 +87,15 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
-
     //    CODE FOR PRESS BACK AGAIN TO EXIT OPERATION
 
     boolean twice;
+
+
+
+
+
+
 
     @Override
     public void onBackPressed() {
@@ -112,3 +121,4 @@ public class MainActivity extends AppCompatActivity {
         }, 3000);
     }
 }
+

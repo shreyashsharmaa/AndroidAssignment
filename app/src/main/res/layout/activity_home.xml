@@ -11,8 +11,134 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginTop="40dp"
+    android:layout_centerInParent="true"
+    android:paddingTop="15dp"
+    android:id="@+id/startLayout"
+    android:visibility="gone"
+
+    >
+
+    <TextView
+        android:id="@+id/topTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Welcome to Quizzler! \n Sizzler for your brain"
+        android:textSize="28sp"
+        android:textColor="@color/colorAccent"
+        android:lines="2"
+        android:textAlignment="center"/>
+    <Button
+            android:id="@+id/startButton"
+            android:layout_width="match_parent"
+
+            android:layout_height="70dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:onClick="startQuiz"
+            android:textSize="30sp"
+            android:layout_marginTop="20dp"
+            android:text="Start"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/colorAccent"
+           />
 
 
+
+</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/quizLayout"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="12dp"
+            android:visibility="gone"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Who was the first President of India?"
+                android:textColor="@color/colorAccent"
+                android:textSize="34sp"
+                android:textAlignment="center"
+                android:layout_margin="10dp"
+                android:id="@+id/ques"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                android:orientation="vertical"
+
+
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Category"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:layout_margin="10dp"
+                    android:id="@+id/category"
+                    android:textAlignment="center"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Difficulty"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/difficulty"
+                    android:textAlignment="center"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:duplicateParentState="true"
+
+                android:layout_margin="15dp"
+                android:orientation="vertical"
+
+                >
+               <Button
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/colorAccent"
+                   android:background="@color/colorPrimaryDark"
+                   android:text="True"
+                   android:textSize="20sp"
+                   android:tag="True"
+                   android:id="@+id/trueButton"
+                   android:onClick="tappedButton"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark"
+                    android:textColor="@color/colorAccent"
+                    android:text="False"
+                    android:textSize="20sp"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/falseButton"
+                    android:onClick="tappedButton"
+                    android:tag="False"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+
+            />
     </RelativeLayout>
     
     
@@ -21,6 +147,7 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         app:menu="@menu/drawermenu"
+        android:id="@+id/navigationView1"
         android:layout_gravity="start"
         android:background="@drawable/greadient_two"
         ></android.support.design.widget.NavigationView>
